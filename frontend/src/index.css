@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+  --font-display: 'Pixelify Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Core palette */
+  --ink: #2B2A4C;      /* text, borders, pressed-shadow */
+  --card: #F8F7FF;      /* panel / card background */
+  --ice: #E9F2FF;       /* secondary light-blue panel */
+  --accent: #7B7FE0;    /* primary periwinkle */
+  --gold: #FFD166;      /* coin / highlight accent */
+  --gold-light: #FFE29B; /* soft gold tint, used in coin icon highlight */
+  --paper: #E7E9FB;      /* page background behind cards */
+
+  /* Status colors */
+  --mint: #63D2A6;      /* savings / under-average */
+  --coral: #FF8FA9;     /* overspend / alert */
+
+  /* Shadows (pixel "pressed button" effect) */
+  --shadow-hard: 5px 5px 0 var(--ink);
+  --shadow-hard-sm: 3px 3px 0 var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

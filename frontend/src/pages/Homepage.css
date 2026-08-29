@@ -1,0 +1,400 @@
+/* ===================================================================
+   Coin Quest — Homepage
+   Signature: hard-edged "pixel shadow" (solid offset, zero blur, zero
+   border-radius) on every bordered box and button. It's the one
+   flourish this page leans on, so it repeats everywhere and nowhere
+   else does anything louder.
+   =================================================================== */
+
+.wrap {
+  max-width: 1080px;
+  margin: 10px auto;
+  padding: 0 32px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  border-bottom: 3px solid var(--ink);
+  background: var(--card);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.brand .coin {
+  image-rendering: pixelated;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-transform: uppercase;
+}
+
+header nav a {
+  position: relative;
+  padding-bottom: 2px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+header nav a:hover {
+  color: var(--accent);
+}
+
+header nav a:last-child {
+  padding: 8px 14px;
+  border: 2px solid var(--ink);
+  background: var(--gold);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+header nav a:last-child:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-avatar {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ink);
+  object-fit: cover;
+}
+
+.nav-avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ice);
+  font-family: var(--font-display);
+  font-size: 12px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 72px 0 88px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
+
+.hero h1 .hi,
+h2 .hi {
+  color: var(--accent);
+  background: linear-gradient(transparent 62%, var(--gold-light) 62%);
+}
+
+.hero-sub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  opacity: 0.82;
+  max-width: 46ch;
+  margin: 0 0 32px;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 3px solid var(--ink);
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.btn.light {
+  background: var(--gold);
+  border-color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.hero-note {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+/* ---------- Pixel frame (shared card shell) ---------- */
+
+.pixel-frame {
+  background: var(--card);
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  padding: 20px;
+}
+
+/* ---------- Sample quest card ---------- */
+
+.quest-card {
+  font-family: var(--font-mono);
+}
+
+.quest-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.7;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 2px dashed var(--ink);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--mint);
+  display: inline-block;
+}
+
+.quest-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.quest-cat {
+  opacity: 0.85;
+}
+
+.quest-amt {
+  font-weight: 700;
+}
+
+.quest-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 3px solid var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.amt {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border: 2px solid var(--ink);
+}
+
+.tag.down {
+  background: var(--mint);
+}
+
+.tag.up {
+  background: var(--coral);
+}
+
+/* ---------- Features ---------- */
+
+.features {
+  padding: 88px 0;
+  background: var(--ice);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 30px;
+  max-width: 20ch;
+  margin-bottom: 44px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.feature:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.feature-icon {
+  image-rendering: pixelated;
+  margin-bottom: 14px;
+}
+
+.feature h3 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.feature p {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.78;
+  margin: 0;
+}
+
+/* ---------- Closing CTA ---------- */
+
+.closing {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.closing h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0 0 32px;
+}
+
+.closing .btn {
+  margin: 0 auto;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 3px solid var(--ink);
+  padding: 22px 24px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header nav {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer .wrap {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start !important;
+  }
+}
