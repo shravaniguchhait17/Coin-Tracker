@@ -4,6 +4,16 @@ A pixel-styled expense tracker. Log rent, groceries, travel, food, and misc
 spending by month, see it charted over time, and get AI-generated suggestions
 on where to cut back — grounded in your actual numbers, not generic advice.
 
+## Home Page
+<img width="1919" height="919" alt="image" src="https://github.com/user-attachments/assets/080a0cc6-9d7c-4446-bf7e-d568c2285b51" />
+<img width="1919" height="922" alt="image" src="https://github.com/user-attachments/assets/52760b96-53aa-4d9c-931b-cf2cbbe83e6d" />
+<img width="1919" height="913" alt="image" src="https://github.com/user-attachments/assets/ef42c520-2764-4adf-b914-49561ec44662" />
+
+## Dashboard
+<img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/f9bd4594-c90f-4d77-a467-3b0987845dd3" />
+<img width="1919" height="923" alt="image" src="https://github.com/user-attachments/assets/edff2353-fdf7-4765-afb0-8ab3cd2a8f18" />
+
+
 ## Features
 
 - **Google sign-in** — no separate account system, OAuth2 via Spring Security
